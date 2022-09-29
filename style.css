@@ -1,0 +1,416 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*General*/
+
+body{
+    background-image: url(imagenes/fondobody.png);
+    font-family: 'Inter', sans-serif;
+    color: #604845;
+    font-size: 1rem;
+} 
+
+/*Grid index*/
+
+.grid_index {
+    display: grid;
+    grid-template-columns: 3fr 1fr ;
+    grid-template-rows: auto ;
+    grid-template-areas:
+      "banner banner"
+      "texto imagen"
+      "texto imagen"
+      "suscripcion suscripcion"
+  }
+  
+  .grid_banner{
+    grid-area:banner;
+    width: 100%;
+    height: auto;
+  }
+
+  .grid_texto{
+    grid-area:texto;
+  }
+
+  .grid_imagen{
+    grid-area:imagen;
+    width: 1fr;
+    height: 510px;
+  }
+
+  .grid_suscripcion{
+    grid-area: suscripcion;
+  }
+
+/*Grid hábitos y salud*/
+
+.grid2{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: 
+  "banner banner banner banner"
+  "intro intro intro intro"
+  "card1 card2 card3 card4";
+}
+
+.intro{
+  grid-area: intro;
+}
+
+.grid.card1{
+  grid-area: card1;
+}
+
+.grid.card2{
+  grid-area: card2;
+}
+
+.grid.card3{
+  grid-area: card3;
+}
+
+.grid.card4{
+  grid-area: card4;
+}
+
+/*Grid alimentación y movimiento*/
+
+.grid3{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto 1fr 1fr;
+  grid-template-areas: 
+  "banner banner banner banner"
+  "card1 card2 card3 card4"
+  "card5 card6 card7 card8";
+  margin-bottom: 50px;
+}
+
+.grid.card1{
+  grid-area: card1;
+}
+
+.grid.card2{
+  grid-area: card2;
+}
+
+.grid.card3{
+  grid-area: card3;
+}
+
+.grid.card4{
+  grid-area: card4;
+}
+
+.grid.card5{
+  grid-area: card5;
+}
+
+.grid.card6{
+  grid-area: card6;
+}
+
+.grid.card7{
+  grid-area: card7;
+}
+
+.grid.card8{
+  grid-area: card8;
+}
+
+/*Links*/
+
+nav{
+  background-color: white;
+}
+
+.nav-link {
+  color: #84564e;
+}
+
+.nav-link:hover{
+  color: #ff8a8a
+}
+
+.activo{
+  color:#ff8a8a;
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  color: #84564e;
+}
+
+a:hover{
+  color: #ff8a8a
+} 
+
+/*Banners*/
+
+.banner{
+  width: 100%;
+} 
+
+/* Sección textos*/
+
+h2.titulos {
+  color: #b35d5d;
+  padding: 0 20px;
+}
+
+p.info{
+  padding: 0 20px;
+}
+
+i{
+  color: #b35d5d;
+}
+
+/*Sección foto*/
+
+img.yo{
+    height: 500px;
+    border: #e09999 solid 5px;
+}
+
+/*Sección suscripción*/
+
+h2.suscripcion{
+  color: #b35d5d;
+  padding: 0 20px;
+}
+
+p.suscripcion{
+  padding: 0 20px;
+}
+
+/*Formulario*/
+
+form.comunidad {
+  padding: 0 20px;
+  margin-bottom: 70px;
+}
+
+input[type=text] {
+    width: 25%;
+    padding: 8px;
+    border: 1px solid #84564e;
+    border-radius: 4px;
+  }
+
+  input[type=email] {
+    width: 25%;
+    padding: 8px;
+    border: 1px solid #84564e;
+    border-radius: 4px;
+  }
+
+  input[type=text]:focus{
+    outline: none;
+    border: 2px solid #ff8a8a;
+  }
+
+  input[type=email]:focus{
+    outline: none;
+    border: 2px solid #ff8a8a;
+  }
+
+  input[type=button] {
+    background-color: #ff8a8a;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+  input[type=button]:hover{
+    background-color: #b35d5d;
+  }
+
+/*Cards*/
+
+.cards{
+  width: 90%;
+  height: 300px;
+  margin: 15px;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+  cursor: default;
+  transition: all 400ms ease;
+}
+
+.cards:hover{
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+  transform: translateY(-3%)
+}
+
+.cards img{
+  width: 100%;
+  height: 180px;
+}
+
+.cards .contenido{
+  padding: 10px;
+}
+
+.cards .contenido h4{
+  margin-bottom: 15px;
+  color: #b35d5d;
+  text-align: center;
+}
+
+/*Footer*/ 
+
+footer{
+    background-color: white;
+    width: 100%;
+    height: 50px;
+    margin-top: 25px;
+    bottom: 0;
+    position: fixed;
+}
+
+p.creado-por {
+    display: inline;
+    float: right;
+    align-items: center;
+    padding-right: 10px;
+    padding-top: 20px;
+    font-size: small;
+}
+
+footer a img.img-footer{
+    width: 30px;
+    margin: 8px;
+}
+
+.instagram{
+    margin-left: 10px;
+}
+
+footer a img.img-footer:hover{
+    opacity: 60%;
+} 
+ 
+/*Media Queries*/
+
+@media only screen and (min-width:451px) and (max-width:960px){
+
+  .grid_index {
+    display: grid;
+    grid-template-columns: 3fr 1fr ;
+    grid-template-rows: auto ;
+    grid-template-areas:
+      "banner banner"
+      "texto texto"
+      "texto texto"
+      "suscripcion suscripcion"
+  }
+
+  .grid_imagen{
+    display: none;
+  }
+
+  footer a img.img-footer{
+    width: 25px;
+    margin: 8px;
+}
+
+.grid2{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: 
+  "banner banner"
+  "intro intro"
+  "card1 card2";
+}
+
+.cards{
+  width: 80%;
+  justify-self: center;
+}
+
+.grid3{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr 1fr;
+  grid-template-areas: 
+  "banner banner"
+  "card1 card2 "
+  "card5 card6 ";
+  margin-bottom: 50px;
+}
+
+}
+
+@media only screen and (max-width:450px){
+
+  .grid_index {
+    display: grid;
+    grid-template-columns: 3fr 1fr ;
+    grid-template-rows: auto ;
+    grid-template-areas:
+      "texto texto"
+      "texto texto"
+      "suscripcion suscripcion"
+  }
+
+  .grid_imagen{
+    display: none;
+  }
+
+  .grid_banner{
+    display: none;
+  }
+
+  footer a img.img-footer{
+    width: 20px;
+    margin: 6px;
+    align-content: center;
+}
+
+p.creado-por {
+  display: none
+}
+
+footer{
+  height: 40px;
+}
+
+h2{
+  font-size: medium;
+}
+
+.grid2{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: 
+  "intro"
+  "card1";
+}
+
+.grid3{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr 1fr;
+  grid-template-areas: 
+  "banner"
+  "card1"
+  "card5";
+  margin-bottom: 50px;
+}
+
+}
