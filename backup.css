@@ -1,0 +1,663 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*General*/
+
+body{
+    background-image: url(imagenes/fondobody.png);
+    font-family: 'Inter', sans-serif;
+    color: #604845;
+    font-size: 1rem;
+}
+
+h1::selection, h2::selection, h5::selection, h6::selection, p::selection{
+  background-color: #b35d5d;
+  color: white;
+}
+
+/*Grid index*/
+
+.grid_index {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    grid-template-rows: auto ;
+    grid-template-areas:
+      "banner banner banner banner"
+      "texto texto texto imagen"
+      "texto texto texto imagen"
+      "seccion1 seccion2 seccion3 seccion4"
+      "suscripcion suscripcion suscripcion suscripcion";
+    justify-items: center;
+    align-items: center;
+  }
+  
+  .grid_banner{
+    grid-area:banner;
+    width: 100%;
+  }
+
+  .grid_texto{
+    grid-area:texto;
+    background-color: #fff;
+    padding: 30px 0px;
+    margin: 35px 0px;
+  }
+
+  .grid_imagen{
+    grid-area:imagen;
+    background-color: #fff;
+    width: 100%;
+    height: 90%;
+    margin: 35px 0px;
+    padding: 30px 0px;
+  }
+
+  .grid_seccion1{
+    grid-area: seccion1;
+    width: 90%;
+    padding: 15px 0px 40px;
+  }
+
+  .grid_seccion2{
+    grid-area: seccion2;
+    width: 90%;
+    padding: 15px 0px 50px;
+  }
+
+  .grid_seccion3{
+    grid-area: seccion3;
+    width: 90%;
+    padding: 15px 0px 40px;
+  }
+
+  .grid_seccion4{
+    grid-area: seccion4;
+    width: 90%;
+    padding: 15px 0px 40px;
+  }
+
+  .grid_suscripcion{
+    grid-area: suscripcion;
+    background-image: url(imagenes/img-unite.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 50px 20px;
+    color: white;
+    margin: 0px 20px 65px 20px;
+  }
+
+/*Grid articulos*/
+
+.grid-art{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: 
+  "banner banner banner banner"
+  "intro intro intro intro"
+  "art-grande art-grande art-grande1 art-grande1"
+  "art1 art2 art3 art4"
+  "suscripcion suscripcion suscripcion suscripcion";
+  justify-content: center;
+  justify-items: center;
+}
+
+.intro{
+  grid-area: intro;
+  background-color: #f7edea;
+  padding: 30px 0px;
+  margin: 25px 0px;
+}
+
+.art-grande{
+  grid-area: art-grande;
+}
+
+.art-grande1{
+  grid-area: art-grande1;
+}
+
+.art1{
+  grid-area: art1;
+}
+
+.art2{
+  grid-area: art2;
+}
+
+.art3{
+  grid-area: art3;
+}
+
+.art4{
+  grid-area: art4;
+}
+
+/*Grid 2 salud, alimentación y movimiento*/
+
+div.grid-art2{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: 
+  "banner banner banner banner"
+  "intro intro intro intro"
+  "art-grande art-grande art-grande1 art-grande1"
+  "art1 art2 art3 art4"
+  "pestaña none none none"
+  "art-grande2 art-grande2 art-grande3 art-grande3"
+  "art5 art6 art7 art8"
+  "suscripcion suscripcion suscripcion suscripcion";
+  justify-content: center;
+  justify-items: center;
+}
+
+.pestaña{
+  grid-area: pestaña;
+  width: 100%;
+}
+
+.art-grande2{
+  grid-area: art-grande2;
+}
+
+.art-grande3{
+  grid-area: art-grande3;
+}
+
+.art5{
+  grid-area: art5;
+}
+
+.art6{
+  grid-area: art6;
+}
+
+.art7{
+  grid-area: art7;
+}
+
+.art8{
+  grid-area: art8;
+}
+
+/*Pestaña*/ 
+
+h4.texto-pestaña{
+  background-color: #b35d5d;
+  color: white;
+  padding: 8px;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 15px;
+  border-radius: 3px;
+}
+
+/*Links*/
+
+nav{
+  background-color: white;
+}
+
+.nav-link {
+  color: #84564e;
+}
+
+.nav-link:hover{
+  color: #ff8a8a
+}
+
+.activo{
+  color:#ff8a8a;
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  color: #84564e;
+}
+
+a:hover{
+  color: #ff8a8a
+} 
+
+/*Banners*/
+
+.banner{
+  width: 100%;
+} 
+
+/*Secciones index*/
+
+/*Duda: No se como hacer para que queden todos a la misma altura y centrados sin ponerle margins y padding, probe con justify y align pero no y no se que es lo que me lo pisa o que pasa*/
+
+img.icono-secciones{
+  width: 70%;
+  margin: 20px 0px 15px 40px ;
+}
+
+h5{
+  color: #ff8a8a;
+  padding: 0 20px ;
+  text-align: center; 
+  font-weight: bold;
+}
+
+h6{
+  padding: 0 20px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* Sección textos*/
+
+h1{
+  color: #b35d5d;
+  padding: 20px 20px;
+  font-weight: bold;
+}
+
+h2.titulos {
+  color: #b35d5d;
+  padding: 0 20px;
+}
+
+p.info{
+  padding: 0 20px;
+}
+
+i{
+  color: #b35d5d;
+}
+
+/*Sección foto*/
+
+img.yo{
+  height: 600px;
+  border: #e09999 solid 8px;
+  padding: 10px;
+}
+
+/*Sección suscripción*/
+
+h2.suscripcion{
+  color: white;
+  font-weight: bold;
+  padding: 0 20px 10px ;
+}
+
+p.suscripcion{
+  padding: 0 20px;
+}
+
+/*Formulario*/
+
+form.comunidad {
+  padding: 10px 20px;
+}
+
+input[type=text] {
+    width: 25%;
+    padding: 8px;
+    border: 1px solid #84564e;
+    border-radius: 4px;
+  }
+
+  input[type=email] {
+    width: 25%;
+    padding: 8px;
+    border: 1px solid #84564e;
+    border-radius: 4px;
+  }
+
+  input[type=text]:focus{
+    outline: none;
+    border: 2px solid #ff8a8a;
+  }
+
+  input[type=email]:focus{
+    outline: none;
+    border: 2px solid #ff8a8a;
+  }
+
+  input[type=button] {
+    background-color: #ff8a8a;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+  input[type=button]:hover{
+    background-color: #b35d5d;
+  }
+
+/*Cards chicas*/
+
+.cards{
+  width: 90%;
+  height: 330px;
+  margin-bottom: 50px;
+  border-radius: 6px;
+  background-color: white;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+  cursor: default;
+  transition: all 300ms ease;
+}
+
+.cards:hover{
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cards img{
+  width: 100%;
+  height: 180px;
+}
+
+.cards h6.titulo-cards{
+  color: #604845;
+  text-align: left;
+  font-weight: bold;
+}
+
+/*Duda: No se como hacer para que queden todos a la misma altura, probe de todo y no cambia nada y no me doy cuenta porque*/
+
+.cards button.boton-cards{
+  background-color:white;
+  color: #b35d5d;
+  font-weight: bold;
+  border: #b35d5d solid 2px;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 5px;
+  float: right;
+  margin-right: 10px;
+}
+
+.cards button.boton-cards:hover{
+  background-color: #b35d5d;
+  color: white;
+}
+
+/*Cards grandes*/
+
+.card-grande{
+  width: 550px;
+  height: 300px;
+  overflow: hidden;
+  margin: 20px 0px;
+  border-radius: 6px;
+  background-color: white;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+  cursor: default;
+  transition: all 300ms ease;
+  position: relative;
+}
+
+.card-grande:hover{
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-grande img{
+  width: 100%;
+  height: 300px;
+}
+
+h6.titulo-card-grande{
+  background-color: rgba(27, 25, 25, 0.5);
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  bottom: 8px;
+  font-size: 22px;
+}
+
+/*Footer*/ 
+
+footer{
+    background-color: white;
+    width: 100%;
+    height: 50px;
+    margin-top: 25px;
+    bottom: 0;
+    position: fixed;
+}
+
+p.creado-por {
+    display: inline;
+    float: right;
+    align-items: center;
+    padding-right: 10px;
+    padding-top: 20px;
+    font-size: small;
+}
+
+footer a img.img-footer{
+    width: 30px;
+    margin: 8px;
+}
+
+.instagram{
+    margin-left: 10px;
+}
+
+footer a img.img-footer:hover{
+    opacity: 60%;
+} 
+ 
+/*Media Queries*/
+
+@media only screen and (min-width:451px) and (max-width:960px){
+
+  .grid_index {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "banner banner"
+    "texto texto"
+    "texto texto"
+    "seccion1 seccion2"
+    "seccion3 seccion4"
+    "suscripcion suscripcion";
+  }
+
+  .grid_imagen{
+    display: none;
+  }
+
+  .grid-art{
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "banner banner"
+    "intro intro"
+    "art-grande art-grande1"
+    "art1 art2"
+    "art3 art4"
+    "suscripcion suscripcion";
+  }
+
+  .intro{
+    padding: 20px 0px;
+    margin: 15px 0px;
+  }
+  
+  img.icono-secciones{
+    width: 50%;
+    margin:0px 0px 15px 90px ;
+  }
+
+  footer a img.img-footer{
+    width: 25px;
+    margin: 8px;
+}
+
+.grid_suscripcion{
+  padding: 30px 15px;
+  margin: 0px 20px 45px 20px;
+}
+
+.cards{
+  width: 90%;
+  height: 300px;
+  margin-bottom: 20px;
+}
+
+.card-grande{
+  width: 90%;
+}
+
+h6.titulo-card-grande{
+  font-size: 18px;
+}
+
+div.grid-art2{
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+  "banner banner"
+  "intro intro"
+  "art-grande art-grande1"
+  "art1 art2"
+  "art3 art4"
+  "pestaña none"
+  "art-grande2 art-grande3"
+  "art5 art6"
+  "art7 art8"
+  "suscripcion suscripcion";
+}
+
+}
+
+@media only screen and (max-width:450px){
+
+  .grid_index {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "banner"
+    "texto"
+    "texto"
+    "seccion1"
+    "seccion2"
+    "seccion3"
+    "seccion4"
+    "suscripcion";
+  }
+
+  .grid_imagen{
+    display: none;
+  }
+
+  .intro{
+    padding: 15px 0px;
+    margin: 10px 0px;
+  }
+
+  .grid_texto{
+    padding: 15px 0px;
+    margin: 10px 0px;
+  }
+  
+  img.icono-secciones{
+    width: 50%;
+    margin:0px 0px 15px 90px ;
+  }
+
+  footer a img.img-footer{
+    width: 25px;
+    margin: 8px;
+}
+
+.grid_suscripcion{
+  padding: 20px 10px;
+  margin: 0px 10px 35px 10px;
+}
+
+p.suscripcion{
+  font-size: x-small;
+}
+
+form.comunidad {
+  padding: 5px 10px;
+}
+
+input[type=text] {
+    width: 20%;
+    padding: 5px;
+  }
+
+  input[type=email] {
+    width: 20%;
+    padding: 5px;
+  }
+
+  input[type=button] {
+    padding: 8px 15px;
+  }
+
+  .grid-art{
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "banner"
+    "intro"
+    "art-grande"
+    "art-grande1"
+    "art1"
+    "art2"
+    "art3"
+    "art4"
+    "suscripcion";
+  }
+
+div.grid-art2{
+  grid-template-columns: 1fr;
+  grid-template-areas: 
+  "banner"
+  "intro"
+  "art-grande"
+  "art-grande1"
+  "art1"
+  "art2"
+  "art3"
+  "art4"
+  "pestaña"
+  "art-grande2"
+  "art-grande3"
+  "art5"
+  "art6"
+  "art7"
+  "art8"
+  "suscripcion";
+}
+
+p.creado-por {
+  display: none
+}
+
+footer{
+  height: 40px;
+}
+
+h2{
+  font-size: medium;
+}
+
+.cards{
+  width: 90%;
+  height: 300px;
+  margin-bottom: 20px;
+}
+
+.card-grande{
+  width: 90%;
+}
+
+h6.titulo-card-grande{
+  font-size: 18px;
+}
+
+}
