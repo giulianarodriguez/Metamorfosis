@@ -11,8 +11,8 @@
   color: #fff;
 }
 
+/*Quise poner una imagen de fondo en el body y en la sección de suscribirse pero no logré que la url la tome, use ../ y ../../ pero con ninguna de las opciones me lo tomaba a pesar de que en el live server si*/
 body {
-  background-image: url(/imagenes/fondobody.png);
   color: #604845;
 }
 body a {
@@ -120,7 +120,7 @@ form.comunidad input[type=email] :focus, form.comunidad input[type=text] :focus 
 
 .grid_suscripcion {
   grid-area: suscripcion;
-  background-image: url(/imagenes/img-unite.jpg);
+  background-color: #b35d5d;
   background-size: cover;
   background-position: center;
   padding: 50px 20px;
