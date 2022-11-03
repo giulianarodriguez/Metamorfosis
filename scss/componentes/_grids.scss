@@ -12,7 +12,7 @@
 
 .grid_suscripcion{
   grid-area: suscripcion;
-  background-color: nth($colores, 3);
+  background-image: url(./../imagenes/img-unite.webp);
   background-size: cover;
   background-position: center;
   @include espacio (50px 20px, 0px 20px 65px 20px);

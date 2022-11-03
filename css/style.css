@@ -11,9 +11,9 @@
   color: #fff;
 }
 
-/*Quise poner una imagen de fondo en el body y en la sección de suscribirse pero no logré que la url la tome, use ../ y ../../ pero con ninguna de las opciones me lo tomaba a pesar de que en el live server si*/
 body {
   color: #604845;
+  background-image: url(./../imagenes/fondobody.png);
 }
 body a {
   text-decoration: none;
@@ -49,7 +49,6 @@ form.comunidad input[type=email] :focus, form.comunidad input[type=text] :focus 
   border: 2px solid #ff8a8a;
 }
 
-/*Duda: No se como hacer para que queden todos a la misma altura, probe de todo y no cambia nada y no me doy cuenta porque*/
 /*Cards chicas*/
 .cards {
   width: 90%;
@@ -60,6 +59,7 @@ form.comunidad input[type=email] :focus, form.comunidad input[type=text] :focus 
   box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
   cursor: default;
   transition: all 300ms ease;
+  position: relative;
 }
 .cards img {
   width: 100%;
@@ -78,8 +78,9 @@ form.comunidad input[type=email] :focus, form.comunidad input[type=text] :focus 
   border-radius: 4px;
   cursor: pointer;
   padding: 5px;
-  float: right;
-  margin-right: 10px;
+  position: absolute;
+  left: 60%;
+  top: 80%;
 }
 
 /*Cards grandes*/
@@ -120,7 +121,7 @@ form.comunidad input[type=email] :focus, form.comunidad input[type=text] :focus 
 
 .grid_suscripcion {
   grid-area: suscripcion;
-  background-color: #b35d5d;
+  background-image: url(./../imagenes/img-unite.webp);
   background-size: cover;
   background-position: center;
   padding: 50px 20px;
@@ -366,24 +367,31 @@ form.comunidad input[type=button] :hover {
     width: 50%;
     margin: 0px 0px 15px 90px;
   }
-  /*Grids articulos*/
+  /*GridArts*/
   .grid-art {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "banner banner" "intro intro" "art-grande art-grande1" "art1 art2" "art3 art4" "suscripcion suscripcion";
   }
-  .grid-art2 {
+  div.grid-art2 {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "banner banner" "intro intro" "art-grande art-grande1" "art1 art2" "art3 art4" "pestaña none" "art-grande2 art-grande3" "art5 art6" "art7 art8" "suscripcion suscripcion";
   }
   /*En común entre las grids articulos*/
   .intro {
-    padding: 20px 0px;
-    margin: 15px 0px;
+    padding: 20px 10px;
+    margin: 15px 10px;
   }
   .cards {
     width: 90%;
     height: 300px;
     margin-bottom: 20px;
+  }
+  .cards figure {
+    overflow: hidden;
+    height: 200px;
+  }
+  .cards figure img {
+    height: auto;
   }
   .card-grande {
     width: 90%;
@@ -415,21 +423,21 @@ form.comunidad input[type=button] :hover {
     margin: 5px 10px 35px 10px;
   }
   .grid_suscripcion p.suscripcion {
-    font-size: x-small;
+    font-size: small;
   }
   form.comunidad {
-    padding: 5px 10px;
+    padding: 8px 10px;
   }
   form.comunidad input[type=text] {
     width: 20%;
-    padding: 5px;
+    padding: 8px;
   }
   form.comunidad input[type=email] {
     width: 20%;
-    padding: 5px;
+    padding: 8px;
   }
   form.comunidad input[type=button] {
-    padding: 8px 15px;
+    padding: 10px 15px;
   }
   /*Index*/
   .grid_index {
@@ -447,7 +455,7 @@ form.comunidad input[type=button] :hover {
     width: 50%;
     margin: 0px 0px 15px 90px;
   }
-  /*Grid2*/
+  /*GridArts*/
   .grid-art {
     grid-template-columns: 1fr;
     grid-template-areas: "banner" "intro" "art-grande" "art-grande1" "art1" "art2" "art3" "art4" "suscripcion";
@@ -457,13 +465,20 @@ form.comunidad input[type=button] :hover {
     grid-template-areas: "banner" "intro" "art-grande" "art-grande1" "art1" "art2" "art3" "art4" "pestaña" "art-grande2" "art-grande3" "art5" "art6" "art7" "art8" "suscripcion";
   }
   .intro {
-    padding: 15px 0px;
-    margin: 10px 0px;
+    padding: 15px 10px;
+    margin: 10px 10px;
   }
   .cards {
     width: 90%;
     height: 300px;
     margin-bottom: 20px;
+  }
+  .cards figure {
+    overflow: hidden;
+    height: 200px;
+  }
+  .cards figure img {
+    height: auto;
   }
   .card-grande {
     width: 90%;

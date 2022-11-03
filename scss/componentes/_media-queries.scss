@@ -33,7 +33,7 @@
         margin:0px 0px 15px 90px ;
     }
 
-    /*Grids articulos*/
+    /*GridArts*/
   
     .grid-art{
       grid-template-columns: 1fr 1fr;
@@ -45,32 +45,42 @@
       "art3 art4"
       "suscripcion suscripcion";
     }
-
-    .grid-art2{
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: 
-        "banner banner"
-        "intro intro"
-        "art-grande art-grande1"
-        "art1 art2"
-        "art3 art4"
-        "pestaña none"
-        "art-grande2 art-grande3"
-        "art5 art6"
-        "art7 art8"
-        "suscripcion suscripcion";
-    }
+  
+  div.grid-art2{
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "banner banner"
+    "intro intro"
+    "art-grande art-grande1"
+    "art1 art2"
+    "art3 art4"
+    "pestaña none"
+    "art-grande2 art-grande3"
+    "art5 art6"
+    "art7 art8"
+    "suscripcion suscripcion";
+  }
 
     /*En común entre las grids articulos*/
   
     .intro{
-      @include espacio (20px 0px, 15px 0px)
+      @include espacio (20px 10px, 15px 10px)
     }
     
     .cards{
         width: $w90;
         height: 300px;
         margin-bottom: 20px;
+
+        figure{
+          overflow: hidden;
+          height: 200px;
+    
+          img{
+            height: auto;
+          }
+    
+        }
     }
   
     .card-grande{
@@ -114,26 +124,26 @@
         @include espacio (20px 10px, 5px 10px 35px 10px);
 
         p.suscripcion{
-            font-size: x-small;
+            font-size: small;
         }
 
     }
   
     form.comunidad {
-        padding: 5px 10px;
+        padding: 8px 10px;
 
         input[type=text] {
             width: 20%;
-            padding: 5px;
+            padding: 8px;
         }
         
         input[type=email] {
             width: 20%;
-            padding: 5px;
+            padding: 8px;
         }
         
         input[type=button] {
-            padding: 8px 15px;
+            padding: 10px 15px;
         }
     }
 
@@ -166,7 +176,7 @@
       margin:0px 0px 15px 90px ;
     }
 
-    /*Grid2*/
+    /*GridArts*/
   
     .grid-art{
       grid-template-columns: 1fr;
@@ -204,14 +214,24 @@
   }
   
   .intro{
-    padding: 15px 0px;
-    margin: 10px 0px;
+    padding: 15px 10px;
+    margin: 10px 10px;
   }
   
   .cards{
     width: 90%;
     height: 300px;
     margin-bottom: 20px;
+
+    figure{
+      overflow: hidden;
+      height: 200px;
+
+      img{
+        height: auto;
+      }
+
+    }
   }
   
   .card-grande{

@@ -11,10 +11,9 @@
 
 }
 
-/*Quise poner una imagen de fondo en el body y en la sección de suscribirse pero no logré que la url la tome, use ../ y ../../ pero con ninguna de las opciones me lo tomaba a pesar de que en el live server si*/
-
 body{
     color: nth($colores, 2 );
+    background-image: url(./../imagenes/fondobody.png);
 
     a {
         text-decoration: none;
